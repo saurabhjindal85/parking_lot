@@ -41,68 +41,9 @@ public class ParkingApp {
 			}
 			processor.process();
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-	/*	String line = sc.nextLine();
-		String[] cmd = line.split(" ");
-		
-		ParkingLot parkingLot = null;
-		
-		
-		//parking Lot creation 
-		if(COMMAND.valueOf(cmd[0].toUpperCase()) == COMMAND.CREATE_PARKING_LOT) {
-			parkingLot = cmd.length == 2 ? new ParkingLot(Integer.valueOf(cmd[1])) : null;
-		}
-		
-		//Parking Operation
-		
-		if (parkingLot != null) {
-			ParkingLotServices services = new ParkingLotServices(parkingLot);
-			while (sc.hasNextLine()) {
-				try {
-					line = sc.nextLine();
-					cmd = line.split(" ");
-					COMMAND C = COMMAND.valueOf(cmd[0].toUpperCase());
-					switch (C) {
-					case PARK:
-						services.addVehicle(new VehicleParked(cmd[1], cmd[2], 0));
-						break;
-					case LEAVE:
-						services.CarLeaving(Integer.valueOf(cmd[1]));
-						break;
-						
-						 * case STATUS: services.status(); break; case
-						 * REGISTRATION_NUMBERS_FOR_CARS_WITH_COLOUR: { List<VehicleParked> list =
-						 * services.searchColour(cmd[1]);
-						 * 
-						 * if (list != null && list.size() > 0) { list.forEach(l ->
-						 * System.out.print(l.getRegNumber() + " ")); } else
-						 * System.out.println("No car in Parking lot of this colour"); } break; case
-						 * SLOT_NUMBERS_FOR_CARS_WITH_COLOUR: { List<VehicleParked> list =
-						 * services.searchColour(cmd[1]); if (list != null && list.size() > 0) {
-						 * list.forEach(l -> System.out.print(l.getParkingLocation() + " ")); } else {
-						 * System.out.println("No car in Parking lot of this colour"); } } break;
-						 
-					case SLOT_NUMBER_FOR_REGISTRATION_NUMBER:
-						services.searchRegNo(cmd[1]);
-						break;
-					}
-				} catch (IllegalArgumentException e) {
-					// TODO Auto-generated catch block
-					System.out.println("Invalid Command please try again ");
-				}
-				catch (Exception e) {
-					System.out.println("Following exception occured in code "+ e.getMessage());
-				}
-			}
-		} else {
-			System.out.println("Parking creation failes due to non integer size");
-		}
-		}
-		catch (Exception ex) {
-			System.out.println("Following Exception occured. Please try again " + ex.getMessage());
-		}*/
+
 	}
 
 }

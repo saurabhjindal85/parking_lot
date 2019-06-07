@@ -37,7 +37,7 @@ public abstract class AbstractProcessor {
 			parkingLotServices = new ParkingLotServices(parkingLot);
 			break;
 		case PARK:
-			if(inputStrArr.length != 3) {
+			if(parkingLotServices == null || inputStrArr.length != 3) {
 				throw new Exception("Invalid no of arguments for command : " + command);
 			} 
 			String regNo = inputStrArr[1];
@@ -45,21 +45,21 @@ public abstract class AbstractProcessor {
 			parkingLotServices.addVehicle(new VehicleParked(regNo, color, 0));
 			break;
 		case LEAVE:
-			if(inputStrArr.length != 2) {
-				throw new Exception("Invalid no of arguments for command : " + command);
+			if( parkingLotServices == null || inputStrArr.length != 2  ) {
+				throw new Exception("Invalid command : " + command);
 			} 
 			int parkingLocation = Integer.parseInt(inputStrArr[1]);
 			parkingLotServices.CarLeaving(parkingLocation);
 			break;
 		case STATUS:
-			if(inputStrArr.length != 1) {
-				throw new Exception("Invalid no of arguments for command : " + command);
+			if(parkingLotServices == null || inputStrArr.length != 1 ) {
+				throw new Exception("Invalid command : " + command);
 			}
 			parkingLotServices.getStatus();
 			break;
 		case FETCH_SLOT_FROM_COLOR:
-			if(inputStrArr.length != 2) {
-				throw new Exception("Invalid no of arguments for command : " + command);
+			if(parkingLotServices == null || inputStrArr.length != 2) {
+				throw new Exception("Invalid command : " + command);
 			}
 			List<Integer>list = parkingLotServices.searchColour(inputStrArr[1]);  //color
 			if (list != null && list.size() > 0) {
@@ -69,14 +69,14 @@ public abstract class AbstractProcessor {
 				System.out.println("No car in Parking lot of this colour");
 			break;
 		case FETCH_CARE_FROM_COLOR:
-			if(inputStrArr.length != 2) {
-				throw new Exception("Invalid no of arguments for command : " + command);
+			if(parkingLotServices == null || inputStrArr.length != 2) {
+				throw new Exception("Invalid command : " + command);
 			}
 			parkingLotServices.getRegNumberFromColor(inputStrArr[1]);  //color
 			break;
 		case FETCH_SLOT_FROM_REG_NO:
-			if(inputStrArr.length != 2) {
-				throw new Exception("Invalid no of arguments for command : " + command);
+			if(parkingLotServices == null || inputStrArr.length != 2 ) {
+				throw new Exception("Invalid command : " + command);
 			}
 			parkingLotServices.searchRegNo(inputStrArr[1]);  //regNo
 			break;

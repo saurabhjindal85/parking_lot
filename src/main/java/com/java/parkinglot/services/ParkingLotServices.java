@@ -100,6 +100,10 @@ public class ParkingLotServices {
 	//Parking Status
 	public void getStatus() {
 		//System.out.println(areaMap);
+		if(parkingLot==null) {
+			System.out.println("Parking Lot is not created or initialize, create one using Create cmd");
+			return;
+		}
 		TreeMap<Integer, VehicleParked> treeMap = new TreeMap(parkingLot.getAreaMap());
 		if(treeMap.size()==0) {
 			System.out.println("No car in parking Lot");

@@ -5,11 +5,14 @@ Parking lot Application
 Java8 and Maven should be installed in machine
 
 # Setup
-goto bin folder and run './setup.sh <code_direcory>'
+goto bin folder and run './setup.sh <code_direcory>'<br />
+**example** ./parking_lot.sh C:\Saurabh\Workspace\drawningCanvas\parking_lot\
 
 # Ways to run this project
 
 1  ./parking_lot.sh <input_filepath> <br />
+
+    **example** ./parking_lot.sh C:\Saurabh\Workspace\drawningCanvas\parking_lot\Test_commands.txt<br/>
     The inputs commands are expected and taken from the file specified <br />
 
 2. ./parking_lot.sh <br />
@@ -28,3 +31,4 @@ goto bin folder and run './setup.sh <code_direcory>'
 # run the testcases only
 
 goto bin folder and run './run_functional_tests.sh <code_direcory>'
+**example** ./parking_lot.sh C:\Saurabh\Workspace\drawningCanvas\parking_lot\

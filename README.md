@@ -9,19 +9,22 @@ goto bin folder and run './setup.sh <code_direcory>'
 
 # Ways to run this project
 
-1   ./parking_lot.sh <input_filepath>  
-    The inputs commands are expected and taken from the file specified
+1  ./parking_lot.sh <input_filepath> <br />
+    The inputs commands are expected and taken from the file specified <br />
 
-2. ./parking_lot.sh 
-   This will start the program in interactive mode
-   The allowed inputs are 
-   create_parking_lot <no_of_slots>
-   park <reg_no> <color>
-   leave <slot_number>
-   status
-   registration_numbers_for_cars_with_colour <colour>
-   slot_numbers_for_cars_with_colour <colour>
-   slot_number_for_registration_number <reg_no>
+2. ./parking_lot.sh <br />
+   This will start the program in interactive mode <br />
+   The allowed inputs are <br />
+    create_parking_lot 6 <br />
+    park MH14-DW-3493 White <br />
+    park MH14-DW-002 White <br />
+    park MH14-DW-003 Black <br />
+    park MH14-DW-004 Red <br />
+    park MH14-DW-005 Blue <br />
+    park MH14-DW-006 Black <br />
+    status <br />
+    slot_numbers_for_cars_with_colour White <br />
     
 # run the testcases only
+
 goto bin folder and run './run_functional_tests.sh <code_direcory>'

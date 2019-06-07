@@ -9,6 +9,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
+import com.java.parkinglot.model.ParkingLot;
 import com.java.parkinglot.model.VehicleParked;
 import com.java.parkinglot.process.AbstractProcessor;
 import com.java.parkinglot.process.CommandLineProcessor;
@@ -40,6 +41,7 @@ public class CarleavingTest {
 
 	@Test
 	public void testParkCar_CarSearchWithColor() throws Exception {
+		ParkingLot.resetTheInstance();
 		processor.validateAndProcess("create_parking_lot 1");//create parking
 		processor.validateAndProcess("park KA-01-HH-1234 White");//park car
 		processor.validateAndProcess("leave 2");//leave unavailable slot
